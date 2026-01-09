@@ -17,17 +17,21 @@ body {
   color: var(--dark);
   line-height: 1.6;
 }
-
-hero {
+.hero {
   height: 100vh;
-  background: 
+  width: 100%;
+  background:
     linear-gradient(
-      rgba(17, 17, 17, 0.55),
-      rgba(17, 17, 17, 0.55)
+      rgba(17, 17, 17, 0.45),
+      rgba(17, 17, 17, 0.45)
     ),
-    url("hero-camel.jpeg") center/cover no-repeat;
+    url("hero-camel.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
 }
+
 
 .hero-overlay {
   position: absolute;
