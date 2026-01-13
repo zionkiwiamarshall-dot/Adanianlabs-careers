@@ -1,108 +1,80 @@
-:root {
-  --earth: #c49a6c;
-  --sand: #f5efe6;
-  --dark: #111111;
-  --accent: #00d1b2;
-}
+/* ====== Hero logo & CTA adjustments (add this to the end of styles.css) ====== */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-}
-
-body {
-  background: var(--sand);
-  color: var(--dark);
-  line-height: 1.6;
-.hero {
-  height: 100vh;
-  width: 100%;
-  background: url("hero-camel.jpeg") center/cover no-repeat;
+/* Ensure the hero area can be the positioning context */
+.hero,
+.hero-section,
+.hero-image,
+.masthead,
+.header-hero {
   position: relative;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2; /* sits above everything */
-  max-width: 700px;
-  color: white;
-  padding: 4rem;
-  text-shadow: 0 4px 12px rgba(0,0,0,0.6); /* stronger shadow to read text */
+/* Place the logo over the hero image at the top-right.
+   These selectors cover several common naming patterns; keep the ones that match your site.
+   Use !important so this overrides any existing positioning from previous CSS rules. */
+.hero .site-logo,
+.hero img.site-logo,
+.hero .logo,
+.hero img.logo,
+header .site-logo,
+header img.logo,
+.header .logo {
+  position: absolute !important;
+  top: 24px !important;       /* distance from the top of the hero image */
+  right: 40px !important;     /* distance from the right edge of the hero image */
+  width: 160px !important;    /* logo width; adjust to taste */
+  max-width: 22% !important;  /* responsive cap */
+  height: auto !important;
+  z-index: 50 !important;     /* keep it above the hero image */
+  background: transparent !important;
+  display: block !important;
+  object-fit: contain !important;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+/* If the logo appears twice (once in header and once in hero), hide the header logo on wide viewports.
+   Uncomment the rule below if you want to hide the original header logo and only show the hero-positioned one. */
+/* header .site-logo, header img.site-logo { display: none !important; } */
+
+/* Lower the "Join the Team" CTA/button by adding extra spacing above it.
+   These selectors aim at common CTA classes/names — adjust to your actual class if needed. */
+.hero .cta,
+.hero .join-button,
+.join-the-team,
+.button.join,
+a.button.join-the-team {
+  margin-top: 44px !important;   /* increase to push the button further down */
+  display: inline-block !important;
 }
 
-.btn-primary {
-  margin-top: 1.5rem;
-  background: var(--accent);
-  color: black;
-  padding: 0.8rem 1.5rem;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: 600;
-  width: fit-content;
+/* If your hero content is absolutely positioned, nudge the content block down */
+.hero .hero-content,
+.hero .content,
+.hero .intro {
+  padding-top: 80px !important;   /* increases the distance from the top of the hero to the content */
 }
 
-/* SECTIONS */
-section {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
+/* Mobile / small screens: reduce sizes and spacing so logo doesn't eat too much space */
+@media (max-width: 768px) {
+  .hero .site-logo,
+  .hero img.site-logo,
+  .hero .logo,
+  header img.logo {
+    top: 12px !important;
+    right: 16px !important;
+    width: 120px !important;
+    max-width: 34% !important;
+  }
 
-.roles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
+  .hero .hero-content,
+  .hero .content,
+  .hero .intro {
+    padding-top: 40px !important;
+  }
 
-.role-card {
-  background: white;
-  padding: 1.5rem;
-  border-left: 4px solid var(--earth);
+  .hero .cta,
+  .hero .join-button,
+  .join-the-team,
+  .button.join {
+    margin-top: 28px !important;
+  }
 }
-
-/* APPLY */
-.apply form {
-  display: grid;
-  gap: 1rem;
-  max-width: 500px;
-}
-
-input, textarea {
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: var(--dark);
-  color: white;
-}
-/* TOP NAV */
-
-}
-.top-logo {
-  position: top-right;
-  padding: 2rem;
-  top: 30px;
-  right: 10px;
-  z-index: 10;
-}
-
-.cta-button {
-  background-color: #61d2d4;  /* turquoise like your screenshot */
-  color: #000;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 60px;
-  display: inline-block;
