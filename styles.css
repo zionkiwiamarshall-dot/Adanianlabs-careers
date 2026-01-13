@@ -90,9 +90,9 @@ footer {
 
 }
 .top-logo {
-  position: absolute;
-  top: 40px;
-  right: 20px;
+  position: top-right;
+  top: 30px;
+  right: 10px;
   z-index: 10;
 }
 
