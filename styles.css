@@ -101,7 +101,7 @@ footer {
 
 }
 .top-logo {
-  position: relative;
+  position: top-right;
   padding: 2rem;
   top: 30px;
   right: 10px;
@@ -117,33 +117,3 @@ footer {
   font-weight: bold;
   margin-top: 60px;
   display: inline-block;
-} 
-/* --- Top-right logo --- */
-.top-logo {
-  position: absolute !important;
-  top: 20px !important;
-  right: 30px !important;
-  z-index: 10 !important;
-}
-
-.top-logo .logo {
-  height: 40px !important;  /* smaller logo */
-  width: auto !important;
-}
-
-/* --- Hero content floating above image --- */
-.hero-content {
-  position: absolute !important;
-  top: 25% !important;      /* moves text down */
-  left: 8% !important;      /* horizontal padding */
-  max-width: 650px !important;
-  color: white !important;
-  z-index: 2 !important;
-  text-shadow: 0 4px 12px rgba(0,0,0,0.6) !important;
-}
-
-/* --- Join the Team button --- */
-.cta-button {
-  margin-top: 40px !important;  /* pushes button lower */
-  display: inline-block !important;
-}
