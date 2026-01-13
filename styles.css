@@ -87,12 +87,7 @@ footer {
   color: white;
 }
 /* TOP NAV */
-.top-nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1.5rem 2rem;
-  z-index: 10;
+
 }
 .top-logo {
   position: absolute;
