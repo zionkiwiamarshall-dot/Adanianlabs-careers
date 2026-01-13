@@ -11,7 +11,12 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
-
+.logo{
+width: 140px
+height: auto;          /* keep aspect ratio */
+display: block;
+margin-left: auto
+}
 body {
   background: var(--sand);
   color: var(--dark);
@@ -100,13 +105,6 @@ footer {
 /* TOP NAV */
 
 }
-.logo {
-  position: top-right;
-  padding: 2rem;
-  top: 30px;
-  right: 10px;
-  z-index: 10;
-}
 
 .cta-button {
   background-color: #61d2d4;  /* turquoise like your screenshot */
@@ -117,3 +115,4 @@ footer {
   font-weight: bold;
   margin-top: 60px;
   display: inline-block;
+}
