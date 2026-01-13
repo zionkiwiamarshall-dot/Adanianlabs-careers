@@ -100,11 +100,7 @@ footer {
   right: 30px;
   z-index: 10;
 }
-}
-.top-logo .logo {
-  height: 50px;
-  width: auto;
-}
+
 .cta-button {
   background-color: #61d2d4;  /* turquoise like your screenshot */
   color: #000;
