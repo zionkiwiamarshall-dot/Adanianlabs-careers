@@ -11,14 +11,7 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
-.logo {
-  width: 140px;          
-  height: auto;          
-  display: block;
-  margin-left: auto;     
-}
-  
-}
+
 body {
   background: var(--sand);
   color: var(--dark);
