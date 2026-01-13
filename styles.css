@@ -91,6 +91,7 @@ footer {
 }
 .top-logo {
   position: top-right;
+  padding: 2rem;
   top: 30px;
   right: 10px;
   z-index: 10;
@@ -103,5 +104,5 @@ footer {
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 30px;
+  margin-top: 60px;
   display: inline-block;
