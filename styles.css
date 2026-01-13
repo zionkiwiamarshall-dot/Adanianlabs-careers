@@ -101,7 +101,7 @@ footer {
 
 }
 .top-logo {
-  position: top-right;
+  position: relative;
   padding: 2rem;
   top: 30px;
   right: 10px;
