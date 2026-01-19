@@ -26,15 +26,14 @@ body {
   background: var(--sand);
   color: var(--dark);
   line-height: 1.6;
-}
-.hero {
+}.hero {
   position: relative;
   width: 100vw;
   height: 100vh;
 
-  /* 👇 THIS IS WHAT EXTENDS IT UP */
-  margin-top: -80px;
-  padding-top: 80px;
+  /* 👇 extends hero behind header */
+  margin-top: -100px;
+  padding-top: 100px;
 
   background: url("hero-camel.jpeg") center center / cover no-repeat;
 }
@@ -139,9 +138,23 @@ footer {
   background: var(--dark);
   color: white;
 }
-header,
-.navbar,
-.top-header,
-.site-header {
+/* Remove header background so hero shows behind it */
+.top-nav {
   background: transparent !important;
+  box-shadow: none !important;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+top-logo {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 10;
+}
+
+.top-logo .logo {
+  height: 38px;   /* reduced size */
+  width: auto;
 }
