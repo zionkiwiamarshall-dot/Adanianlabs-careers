@@ -11,16 +11,7 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
-.top-logo {
-  position: absolute;
-  top: 24px;
-  right: 40px;
-  z-index: 3;
-}
 
-.top-logo img {
-  height: 36px;
-  width: auto;
 }
 body {
   background: var(--sand);
@@ -139,13 +130,14 @@ footer {
   color: white;
 }
 /* Remove header background so hero shows behind it */
-.top-nav {
-  background: transparent !important;
-  box-shadow: none !important;
-  position: absolute;
+top-nav {
+  background: transparent !important; /* so the camels show through */
+  position: absolute;                 /* float on top of hero */
   top: 0;
-  width: 100%;
-  z-index: 5;
+  right: 0;                           /* align to the right */
+  width: auto;
+  z-index: 20;                        /* stays above hero content */
+  padding: 20px 32px;                 /* spacing from edges */
 }
 top-logo {
   position: absolute;
@@ -155,6 +147,6 @@ top-logo {
 }
 
 .top-logo .logo {
-  height: 38px;   /* reduced size */
+  height: 48px;   /* reduced size */
   width: auto;
 }
