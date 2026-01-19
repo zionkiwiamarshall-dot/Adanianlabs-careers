@@ -20,7 +20,7 @@ body {
   line-height: 1.6;
 }.hero {
   position: relative;
-  height: 500px;
+  height: 100vh;
   background: url("hero-camel.jpeg") center center / cover no-repeat;
 }
 .hero::before {
