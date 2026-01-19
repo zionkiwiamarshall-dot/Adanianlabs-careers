@@ -21,25 +21,36 @@ body {
   background: var(--sand);
   color: var(--dark);
   line-height: 1.6;
+}
 .hero {
+  position: relative;
+  width: 100vw;
   height: 100vh;
-  width: 100%;
-  background: url("hero-camel.jpeg") center/cover no-repeat;
-  position: relative;
+  margin: 0;
+  padding: 0;
+  background: url("hero-camel.jpeg") center center / cover no-repeat;
+  overflow: hidden;
 }
-
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.35) 35%,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+}
 .hero-content {
-  position: relative;
-  z-index: 2; /* sits above everything */
-  max-width: 700px;
-  color: white;
-  padding: 4rem;
-  text-shadow: 0 4px 12px rgba(0,0,0,0.6); /* stronger shadow to read text */
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  position: absolute;
+  top: 32%;              /* lower = more cinematic */
+  left: 8%;
+  max-width: 620px;
+  z-index: 2;
+  color: #ffffff;
 }
 
 .btn-primary {
