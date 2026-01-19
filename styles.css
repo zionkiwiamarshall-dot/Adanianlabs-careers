@@ -109,15 +109,13 @@ footer {
 }
 /* Remove header background so hero shows behind it */
 top-nav {
-  background: transparent !important; /* so the camels show through */
   position: absolute;                 /* float on top of hero */
   top: 0;
   right: 0;                           /* align to the right */
-  width: auto;
   z-index: 20;                        /* stays above hero content */
 }
 
-.top-logo .logo {
-  margin: 23px;   /* reduced size */
-  width: 106px;
+.top-nav .logo {
+  margin: 10px;   /* reduced size */
+  width: 100px;
 }
