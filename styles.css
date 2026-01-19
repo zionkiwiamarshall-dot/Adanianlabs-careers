@@ -12,26 +12,17 @@
   font-family: 'Inter', sans-serif;
 }
 
-}
 body {
+  display: flex;
+  flex-direction: column;
   background: var(--sand);
   color: var(--dark);
   line-height: 1.6;
 }.hero {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-
-  /* 👇 extends hero behind header */
-  margin-top: -100px;
-  padding-top: 100px;
-
   background: url("hero-camel.jpeg") center center / cover no-repeat;
 }
 .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.55) 0%,
@@ -42,12 +33,11 @@ body {
   z-index: 1;
 }
 .hero-content {
-  position: absolute;
-  top: 32%;              /* lower = more cinematic */
-  left: 8%;
-  max-width: 620px;
   z-index: 2;
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .hero-content h1 {
   font-size: 3.2rem;
@@ -66,13 +56,11 @@ body {
   padding: 10px 20px;   /* reduced */
   font-size: 0.9rem;   /* smaller text */
   border-radius: 5px;
-  margin-top: 40px;
   display: inline-block;
 }
 
 
 .btn-primary1 {
-  margin-top: 3rem;
   background: var(--accent);
   color: black;
   padding: 0.8rem 1.5rem;
@@ -85,7 +73,6 @@ body {
 /* SECTIONS */
 section {
   padding: 4rem 2rem;
-  max-width: 1200px;
   margin: auto;
 }
 
@@ -128,11 +115,9 @@ top-nav {
   right: 0;                           /* align to the right */
   width: auto;
   z-index: 20;                        /* stays above hero content */
-  padding: 20px 32px;                 /* spacing from edges */
 }
 
-
 .top-logo .logo {
-  height: 9px;   /* reduced size */
-  width: auto;
+  margin: 23px;   /* reduced size */
+  width: 106px;
 }
