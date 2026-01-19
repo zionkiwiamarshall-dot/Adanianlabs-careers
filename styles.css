@@ -128,11 +128,11 @@ top-nav {
   right: 0;                           /* align to the right */
   width: auto;
   z-index: 20;                        /* stays above hero content */
-  padding: 20px 32px;                 /* spacing from edges */
+  padding: 10px 16px;                 /* spacing from edges */
 }
 
 
 .top-logo .logo {
-  height: 48px;   /* reduced size */
+  height: 18px;   /* reduced size */
   width: auto;
 }
