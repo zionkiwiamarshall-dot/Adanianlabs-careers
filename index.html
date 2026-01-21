@@ -107,27 +107,25 @@
 </section>
 
 <!-- APPLY -->
+<!-- APPLY SECTION -->
 <section class="apply" id="apply">
   <h2>Apply Now</h2>
 
-  <form
-  name="adanian-careers"
-  method="POST"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
->
+  <!-- Netlify Form -->
+  <form name="adanian-careers" method="POST" data-netlify="true" action="/">
+    <!-- Hidden input required by Netlify -->
+    <input type="hidden" name="form-name" value="adanian-careers">
 
- <form name="adanian-careers" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="adanian-careers">
+    <!-- Form fields -->
+    <input type="text" name="full_name" placeholder="Full Name" required />
+    <input type="text" name="qualifications" placeholder="Qualifications" required />
+    <textarea name="experience" placeholder="Work Experience (if any)"></textarea>
+    <input type="email" name="email" placeholder="Email Address" required />
+    <input type="tel" name="phone" placeholder="Phone Number" required />
 
-  <input type="text" name="full_name" placeholder="Full Name" required>
-  <input type="text" name="qualifications" placeholder="Qualifications" required>
-  <textarea name="experience" placeholder="Work Experience (if any)"></textarea>
-  <input type="email" name="email" placeholder="Email Address" required>
-  <input type="tel" name="phone" placeholder="Phone Number" required>
-
-  <button type="submit" class="btn-primary">Submit Application</button>
-</form>
+    <!-- Submit button -->
+    <button type="submit" class="btn-primary">Submit Application</button>
+  </form>
 
   <p class="form-note">
     All applications are reviewed by the Adanian Labs team.
